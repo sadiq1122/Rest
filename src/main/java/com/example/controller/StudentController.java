@@ -17,13 +17,13 @@ public class StudentController {
 
 
 
-    @RequestMapping(value="/saveStudent",method = RequestMethod.POST)
+    @RequestMapping(value="/save",method = RequestMethod.POST)
     private void saveStudent(@RequestBody Student student)
     {
         studentService.saveStudent(student);
     }
 
-    @RequestMapping(value = "/showStudents",method = RequestMethod.GET)
+    @RequestMapping(value = "/show",method = RequestMethod.GET)
     private ResponseDetails showStudents()
     {
         return studentService.showStudents();
@@ -31,7 +31,7 @@ public class StudentController {
     }
 
 
-    @RequestMapping(value = "/getStudent/{roll}",method = RequestMethod.GET)
+    @RequestMapping(value = "/get/{roll}",method = RequestMethod.GET)
     private ResponseDetails getStudent(@PathVariable String roll)
     {
         return studentService.getStudent(roll);
@@ -39,14 +39,14 @@ public class StudentController {
     }
 
 
-    @RequestMapping(value = "/saveStudents",method = RequestMethod.POST)
+    @RequestMapping(value = "/saveMany",method = RequestMethod.POST)
     private ResponseDetails saveStudents(@RequestBody ArrayList<Student> students)
     {
         return studentService.saveStudents(students);
 
     }
 
-    @RequestMapping(value = "/countStudents",method = RequestMethod.GET)
+    @RequestMapping(value = "/count",method = RequestMethod.GET)
     private ResponseDetails countStudents()
     {
         return studentService.countStudent();
