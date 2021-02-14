@@ -33,6 +33,8 @@ public class StudentDAO {
      ResponseDetails responseDetails =  new ResponseDetails();
      String sql ="insert into student values(?,?,?)";
      Object[] obj;
+
+     //Inserting list of students through loop
      try {
          for (int i = 0; i < students.size(); i++) {
              obj = new Object[]{students.get(i).getName(), students.get(i).getRoll(), students.get(i).getCourses()};
