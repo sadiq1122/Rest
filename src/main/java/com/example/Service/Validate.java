@@ -13,7 +13,7 @@ public class Validate {
 
         try {
         // checking whether the param contains only numeric digits
-            int roll = Integer.valueOf(param);
+            int roll = Integer.parseInt(param);
             return true;
 
         } catch (Exception e) {
