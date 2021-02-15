@@ -18,8 +18,7 @@ public class StudentService {
     @Autowired
     private StudentDAO studentDAO;
 
-    public void saveStudent(Student student)
-    {
+    public void saveStudent(Student student) {
 
         studentDAO.saveStudent(student);
     }
@@ -29,11 +28,26 @@ public class StudentService {
     }
 
     public ResponseDetails getStudent(String roll) {
-        return studentDAO.getStudent(roll);
+
+
+        //validating the roll parameter from the url
+        boolean b = Validate.validateString(roll);
+
+        if (b) {
+            return studentDAO.getStudent(roll);
+
+        } else {
+            ResponseDetails responseDetails = new ResponseDetails();
+            responseDetails.setMessage("Invalid Parameter Received");
+            responseDetails.setStatus(404);
+            return responseDetails;
+
+        }
+
+
     }
 
-    public ResponseDetails saveStudents(ArrayList<Student> students)
-    {
+    public ResponseDetails saveStudents(ArrayList<Student> students) {
         return studentDAO.saveStudents(students);
     }
 

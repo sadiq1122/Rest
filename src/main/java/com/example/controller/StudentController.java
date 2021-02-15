@@ -18,13 +18,13 @@ public class StudentController {
 
 
 
-    @RequestMapping(value="/save",method = RequestMethod.POST)
+    @RequestMapping(value="/save",method = RequestMethod.POST,consumes = "application/json")
     private void saveStudent(@RequestBody Student student)
     {
         studentService.saveStudent(student);
     }
 
-    @RequestMapping(value = "/show",method = RequestMethod.GET)
+    @RequestMapping(value = "/show",method = RequestMethod.GET, produces = "application/json")
     private ResponseDetails showStudents()
     {
         return studentService.showStudents();
@@ -32,7 +32,7 @@ public class StudentController {
     }
 
 
-    @RequestMapping(value = "/get/{roll}",method = RequestMethod.GET)
+    @RequestMapping(value = "/get/{roll}",method = RequestMethod.GET,produces = "application/json")
     private ResponseDetails getStudent(@PathVariable String roll)
     {
         return studentService.getStudent(roll);
@@ -40,14 +40,14 @@ public class StudentController {
     }
 
 
-    @RequestMapping(value = "/saveMany",method = RequestMethod.POST)
+    @RequestMapping(value = "/saveMany",method = RequestMethod.POST,consumes = "application/json")
     private ResponseDetails saveStudents(@RequestBody ArrayList<Student> students)
     {
         return studentService.saveStudents(students);
 
     }
 
-    @RequestMapping(value = "/count",method = RequestMethod.GET)
+    @RequestMapping(value = "/count",method = RequestMethod.GET,produces = "application/json")
     private ResponseDetails countStudents()
     {
         return studentService.countStudent();
