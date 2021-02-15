@@ -7,7 +7,7 @@ public class Validate {
 
 
         //if the parameter contains a space then it is an illegal param
-        if (param.contains(" ")) {
+        if (param.contains(" ") || param.length()>10) {
             return false;
         }
 

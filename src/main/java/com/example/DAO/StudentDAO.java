@@ -20,7 +20,7 @@ public class StudentDAO {
 
     public void saveStudent(Student student)
     {
-
+        //inserting a single student object
         String sql="insert into student values(?,?,?)";
         Object[] b ={student.getName(),student.getRoll(),student.getCourses()};
         log.info(String.valueOf(student));
@@ -60,6 +60,7 @@ public class StudentDAO {
         try {
 
             String sql = "select * from student";
+            //Using RowMapper for mapping rows received from Database into list of students
             List<Student> students = jdbcTemplate.query(sql, new mapRows());
             responseDetails.setStudentList((ArrayList<Student>) students);
 
