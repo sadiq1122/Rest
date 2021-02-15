@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 
 @RestController
+@RequestMapping("/Student")
 public class StudentController {
 
     @Autowired

@@ -47,4 +47,14 @@ public class ResponseDetails {
     public void setStudentList(ArrayList<Student> studentList) {
         this.studentList = studentList;
     }
+
+    @Override
+    public String toString() {
+        return "ResponseDetails{" +
+                "message='" + message + '\'' +
+                ", status=" + status +
+                ", student=" + student +
+                ", studentList=" + studentList +
+                '}';
+    }
 }

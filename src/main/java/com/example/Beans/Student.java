@@ -29,4 +29,13 @@ public class Student {
     public void setCourses(String courses) {
         this.courses = courses;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", roll='" + roll + '\'' +
+                ", courses='" + courses + '\'' +
+                '}';
+    }
 }
