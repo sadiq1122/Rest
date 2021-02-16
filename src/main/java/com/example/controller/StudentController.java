@@ -18,11 +18,14 @@ public class StudentController {
 
 
 
+
     @RequestMapping(value="/save",method = RequestMethod.POST,consumes = "application/json")
     private void saveStudent(@RequestBody Student student)
     {
         studentService.saveStudent(student);
+
     }
+
 
     @RequestMapping(value = "/show",method = RequestMethod.GET, produces = "application/json")
     private ResponseDetails showStudents()
