@@ -1,7 +1,7 @@
 package com.example.Service;
 
-import com.example.Beans.ResponseDetails;
-import com.example.Beans.Student;
+import com.example.Models.ResponseDetails;
+import com.example.Models.Student;
 import com.example.DAO.StudentDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;

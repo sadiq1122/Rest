@@ -6,6 +6,46 @@ public class Student {
     private String courses;
 
 
+    public static class StudentBuilder{
+
+        private String name;
+        private String roll;
+        private String courses;
+
+
+
+        public StudentBuilder(String roll)
+        {
+            this.roll = roll;
+        }
+
+        public StudentBuilder withName(String name)
+        {
+            this.name=name;
+            return this;
+        }
+
+        public StudentBuilder withCourses(String courses)
+        {
+            this.courses=courses;
+            return this;
+        }
+
+
+        public Student build()
+        {
+            Student student = new Student();
+            student.roll=this.roll;
+            student.name=this.name;
+            student.courses=this.courses;
+            return student;
+        }
+
+    }
+
+
+
+
     public String getName() {
         return name;
     }

@@ -2,8 +2,19 @@ package com.example.Service;
 
 public class Validate {
 
+    /* The parameter that is passed with url is validated
+
+       in order to make sure it is not an SQL Injection
+
+     */
+
 
     public static boolean validateString(String param) {
+
+
+
+
+
 
 
         //if the parameter contains a space then it is an illegal param

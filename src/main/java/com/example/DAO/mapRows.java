@@ -3,7 +3,7 @@ package com.example.DAO;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.example.Beans.Student;
+import com.example.Models.Student;
 import org.springframework.jdbc.core.RowMapper;
 
 
