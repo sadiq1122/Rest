@@ -1,4 +1,4 @@
-package com.example.Beans;
+package com.example.Models;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;

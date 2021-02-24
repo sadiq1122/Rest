@@ -1,4 +1,4 @@
-package com.example.Beans;
+package com.example.Models;
 
 public class Student {
     private String name;
